@@ -1,3 +1,8 @@
+import sort.InsertionSort;
+import sort.Sort;
+
+import java.util.Arrays;
+
 public class Application {
 
     public static void main(String[] args) {
@@ -89,8 +94,21 @@ public class Application {
 
         // `git checkout <name>` - переключает репозиторий на указанную ветку
         // при условии, что в исходной ветке нет незафиксированных изменений.
+
+        // Конфликт в Git - ситуация при которой происходит изменение одного и
+        // того же файла в двух разных ветках. При объединении двух этих веток
+        // в одну будет спровоцирован конфликт требующий ручного решения.
+
+        System.out.println("Sort Application");
+
+        Sort<String> insertionSort = new InsertionSort<>();
+        String[] array = new String[]{"liquid", "application", "tax", "xenon"};
+        insertionSort.sort(array);
+        System.out.println(Arrays.toString(array));
     }
 }
+
+
 
 
 
